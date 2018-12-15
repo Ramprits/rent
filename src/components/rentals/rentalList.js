@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import Rental from "./rental";
+import React, { Component } from 'react';
+import Rental from './rental';
 export default class RentalList extends Component {
   constructor() {
     super();
     this.onAddNewRental = this.onAddNewRental.bind(this);
   }
-  state = { 
-    rentalList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  state = {
+    rentalList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
   };
   renderRentalList = () => {
     return this.state.rentalList.map((rental, index) => {

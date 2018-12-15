@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 const PostDetails = props => {
   return (
     <div>
       <div
         className="card"
         style={{
-          marginTop: "1rem",
-          height: "20rem",
-          cursor: "pointer"
+          marginTop: '1rem',
+          height: '20rem',
+          cursor: 'pointer',
         }}
       >
         <div className="card-body">

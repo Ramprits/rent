@@ -1,22 +1,22 @@
-import React, { Component } from "react";
-import {Link} from 'react-router-dom';
-import axios from "axios";
-import News from "./news";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import News from './news';
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     console.log(props);
     this.state = {
-      posts: []
+      posts: [],
     };
   }
 
   componentDidMount() {
-    axios.get("https://jsonplaceholder.typicode.com/posts").then(res => {
+    axios.get('https://jsonplaceholder.typicode.com/posts').then(res => {
       const posts = res.data;
       this.setState({
-        posts
+        posts,
       });
     });
   }
@@ -26,16 +26,11 @@ export default class Home extends Component {
       <div className="row">
         {this.state.posts.map((posts, index) => {
           return (
-           <div className="col-md-3">
-            <Link to={`/home/${posts.id}`}>
-            <News
-              
-              key={index}
-              title={posts.title}
-              body={posts.body}
-              />
+            <div className="col-md-3">
+              <Link to={`/home/${posts.id}`}>
+                <News key={index} title={posts.title} body={posts.body} />
               </Link>
-              </div>
+            </div>
           );
         })}
       </div>

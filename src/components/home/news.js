@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const News = props => {
   return (
@@ -6,9 +6,9 @@ const News = props => {
       <div
         className="card"
         style={{
-          marginTop: "1rem",
-          height: "20rem",
-          cursor: "pointer"
+          marginTop: '1rem',
+          height: '20rem',
+          cursor: 'pointer',
         }}
       >
         <div className="card-body">
