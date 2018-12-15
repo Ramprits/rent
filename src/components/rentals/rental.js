@@ -6,7 +6,10 @@ const Rental = props => {
       <div className="card mt-1 mr-1">
         <div className="card-body">
           <div className="mr-2">{props.id}</div>
-          Welcome to Retal
+          <p>{props.name}</p>
+          <p>{props.email}</p>
+          <p>{props.title}</p>
+          {props.key}
         </div>
       </div>
     </section>
