@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actions from 'actions';
+import { Link } from 'react-router-dom';
 import Rental from './rental';
-import * as actions from '../../actions';
+
 class RentalList extends Component {
   renderRentalList = () => {
     return this.props.rentals.map((rental, index) => {
       return (
-        <div>
+        <Link to={`/rentalList/${rental.id}`}>
           <Rental
             name={rental.name}
             email={rental.email}
             title={rental.title}
             key={rental.id}
           />
-        </div>
+        </Link>
       );
     });
   };

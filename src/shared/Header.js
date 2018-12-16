@@ -7,9 +7,9 @@ const Header = props => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
-          <a className="navbar-brand" href="http://google.com">
+          <Link className="navbar-brand" to="/rentalList">
             Book With Me
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
